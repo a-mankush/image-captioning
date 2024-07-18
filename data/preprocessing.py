@@ -5,6 +5,7 @@ import tensorflow as tf
 from keras import layers
 from keras.layers import TextVectorization
 
+from data.data_pipeline import make_dataset
 from data.load_data import load_captions_data, train_val_split
 
 
@@ -41,3 +42,7 @@ image_augmentation = keras.Sequential(
         layers.RandomContrast(0.3),
     ]
 )
+
+# Pass the list of images path and the list of corrosponding captions
+train_dataset = make_dataset(list(train_data.keys()), list(train_data.values()))
+valid_dataset = make_dataset(list(valid_data.keys()), list(valid_data.values()))
