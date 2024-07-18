@@ -3,6 +3,7 @@ import tensorflow as tf
 from keras import layers
 
 from models.positional_enbeddings import PositionalEmbedding
+from utils.config import EMBED_DIM, SEQ_LENGTH, VOCAB_SIZE
 
 
 class TransformerDecoderBlock(layers.Layer):

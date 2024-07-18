@@ -1,6 +1,9 @@
+import os
 from typing import DefaultDict
 
 import numpy as np
+
+from utils.config import IMAGES_PATH, SEQ_LENGTH
 
 
 def load_captions_data(filename):

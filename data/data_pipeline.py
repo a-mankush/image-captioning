@@ -1,5 +1,7 @@
 import tensorflow as tf
 
+from utils.config import AUTOTUNE, BATCH_SIZE, IMAGE_SIZE
+
 
 def decode_and_resize(img_path):
     img = tf.io.read_file(
@@ -24,4 +26,3 @@ def make_dataset(images, captions):
     dataset = dataset.batch(BATCH_SIZE).prefetch(AUTOTUNE)
 
     return dataset
-

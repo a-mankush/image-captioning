@@ -7,6 +7,7 @@ from keras.layers import TextVectorization
 
 from data.data_pipeline import make_dataset
 from data.load_data import load_captions_data, train_val_split
+from utils.config import CAPTIONS_PATH, IMAGE_SIZE, SEQ_LENGTH, VOCAB_SIZE
 
 
 def custom_standardization(input_string):

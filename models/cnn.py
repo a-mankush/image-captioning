@@ -2,6 +2,8 @@ import keras
 from keras import layers
 from keras.applications import InceptionResNetV2, InceptionV3, efficientnet
 
+from utils.config import IMAGE_SIZE
+
 
 def get_EfficientNetB0():
     return efficientnet.EfficientNetB0(
